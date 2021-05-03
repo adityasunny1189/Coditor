@@ -27,6 +27,7 @@ def api_call():
         data_id = json.loads(di1)
         response_output = requests.post(api_end_point_get_output, json=data_id)
         output = response_output.json()['output']
+        print(output)
         error = response_output.json()['error']
         output = output.split('\n')
         print(output)
