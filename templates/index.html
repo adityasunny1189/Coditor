@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Kalam:wght@300&family=Roboto:wght@300&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <link rel="stylesheet" href="static/styles.css">
+</head>
+<body>
+    <header>
+        <nav class="navbar navbar-dark bg-dark">
+          <a class="navbar-brand" href="#">Coditor</a>
+        </nav>
+    </header>
+    <div>
+        <div class="text-editor">
+            <form method="POST" action="">
+                <textarea cols="60" rows="21" name="text_editor"></textarea>
+                <br>
+                <input class="btn btn-success" type="submit">
+            </form>
+        </div>
+        <div class="result">
+            <h3>Output</h3>
+            <div class="output">
+                {% for i in output %}
+                    {{ i }}
+                    <br>
+                {% endfor %}
+            </div>
+            <h3>Error</h3>
+            <div class="error">
+                {{ error }}
+            </div>
+        </div>
+    </div>
+</body>
+</html>
