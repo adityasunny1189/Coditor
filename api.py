@@ -2,6 +2,7 @@ from flask import Flask, jsonify, request, render_template
 from flask_cors import CORS
 import requests
 import json
+import time
 
 app = Flask(__name__)
 CORS(app)
@@ -25,6 +26,7 @@ def api_call():
             "id": f"{code_editor_id}"
         }
         print(f'Id: {code_editor_id}')
+        time.sleep(10)
         di1 = json.dumps(di)
         data_id = json.loads(di1)
         response_output = requests.post(api_end_point_get_output, json=data_id)
