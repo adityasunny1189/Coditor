@@ -27,13 +27,12 @@ def api_call():
         api_end_point_get_id = f'https://codersapi.herokuapp.com/api/codeall/'
         response_output = requests.post(api_end_point_get_id, json=data)
         print(f'Response Output: {response_output.text}')
-        try:
-            output = response_output.json()['output']
-            error = response_output.json()['error']
-            output = output.split('\n')
-            return render_template('index.html', output=output, error=error)
-        except AttributeError:
-            return render_template('index.html', output=[], error='')
+        output = response_output.json()['output']
+        error = response_output.json()['error']
+        if not output:
+            output = ""
+        output = output.split('\n')
+        return render_template('index.html', output=output, error=error)
         
         # End Code
         
