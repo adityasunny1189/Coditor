@@ -26,7 +26,7 @@ def api_call():
             "id": f"{code_editor_id}"
         }
         print(f'Id: {code_editor_id}')
-        time.sleep(10)
+        time.sleep(5)
         di1 = json.dumps(di)
         data_id = json.loads(di1)
         response_output = requests.post(api_end_point_get_output, json=data_id)
