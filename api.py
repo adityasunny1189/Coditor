@@ -32,7 +32,7 @@ def api_call():
         if not output:
             output = ""
         output = output.split('\n')
-        return render_template('index.html', output=output, error=error)
+        return render_template('index.html', output=output, error=error, code=code)
         
         # End Code
         
@@ -64,7 +64,7 @@ def api_call():
 #         print(output)
 #         return render_template('index.html', output=output, error=error)
     else:
-        return render_template('index.html', output=[], error='')
+        return render_template('index.html', output=[], error='', code='')
 
 
 if __name__ == '__main__':
