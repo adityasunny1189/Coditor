@@ -1,7 +1,8 @@
-textarea {
+.code-area {
     color: #49F477;
     background: #2c292d;
-    margin-top: 20px;
+    height: 500px;
+    width: 600px;
     font-family: 'Kalam', cursive;
     font-size: 18px;
     border: 4px solid seashell;
