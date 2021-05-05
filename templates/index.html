@@ -17,6 +17,8 @@
     <div>
         <div class="text-editor">
             <form method="POST" action="">
+                <textarea class="code-area" cols="60" rows="21" name="text_editor">{{ code }}</textarea>
+                <br>
                 <select name="language">
                     <option>python3</option>
                     <option>cpp</option>
@@ -24,9 +26,7 @@
                     <option>java</option>
                     <option>javascript</option>
                 </select>
-                <textarea cols="60" rows="21" name="text_editor">{{ code }}</textarea>
-                <br>
-                <input name="input_value" placeholder="Input">
+                <textarea name="input_value" placeholder="Enter your input."></textarea>
                 <input class="btn btn-success" type="submit">
             </form>
         </div>
